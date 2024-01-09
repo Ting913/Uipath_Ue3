@@ -5,7 +5,7 @@
   <VisualBasic.Settings>
     <x:Null />
   </VisualBasic.Settings>
-  <sap:VirtualizedContainerService.HintSize>821.2436974789916,2733.1764705882356</sap:VirtualizedContainerService.HintSize>
+  <sap:VirtualizedContainerService.HintSize>821.2436974789916,2909.042016806723</sap:VirtualizedContainerService.HintSize>
   <sap2010:WorkflowViewState.IdRef>test_if_while_1</sap2010:WorkflowViewState.IdRef>
   <TextExpression.NamespacesForImplementation>
     <sco:Collection x:TypeArguments="x:String">
@@ -35,6 +35,7 @@
       <x:String>GlobalConstantsNamespace</x:String>
       <x:String>System.Reflection</x:String>
       <x:String>Microsoft.VisualBasic.CompilerServices</x:String>
+      <x:String>UiPath.Platform.ResourceHandling</x:String>
     </sco:Collection>
   </TextExpression.NamespacesForImplementation>
   <TextExpression.ReferencesForImplementation>
@@ -78,9 +79,10 @@
       <AssemblyReference>Microsoft.VisualBasic.Core</AssemblyReference>
       <AssemblyReference>UiPath.System.Activities.Design</AssemblyReference>
       <AssemblyReference>UiPath.System.Activities.ViewModels</AssemblyReference>
+      <AssemblyReference>UiPath.Platform</AssemblyReference>
     </sco:Collection>
   </TextExpression.ReferencesForImplementation>
-  <Sequence DisplayName="test_if_while" sap:VirtualizedContainerService.HintSize="645.3781512605043,2668.638655462185" sap2010:WorkflowViewState.IdRef="Sequence_1">
+  <Sequence DisplayName="test_if_while" sap:VirtualizedContainerService.HintSize="645.3781512605043,2844.5042016806724" sap2010:WorkflowViewState.IdRef="Sequence_1">
     <Sequence.Variables>
       <Variable x:TypeArguments="x:Int32" Default="1" Name="counter" />
       <Variable x:TypeArguments="x:Int32" Name="downpayment" />
@@ -92,9 +94,9 @@
       </scg:Dictionary>
     </sap:WorkflowViewStateService.ViewState>
     <WriteLine DisplayName="Write Line" sap:VirtualizedContainerService.HintSize="584.0672268907564,91.15966386554622" sap2010:WorkflowViewState.IdRef="WriteLine_4" Text="[&quot;Current counter value: &quot; &amp; counter.ToString]" />
-    <ui:InterruptibleWhile CurrentIndex="{x:Null}" DisplayName="While" sap:VirtualizedContainerService.HintSize="584.0672268907564,2028.1008403361345" sap2010:WorkflowViewState.IdRef="InterruptibleWhile_1">
+    <ui:InterruptibleWhile CurrentIndex="{x:Null}" Condition="[counter &lt; 3]" DisplayName="While" sap:VirtualizedContainerService.HintSize="584.0672268907564,2203.966386554622" sap2010:WorkflowViewState.IdRef="InterruptibleWhile_1">
       <ui:InterruptibleWhile.Body>
-        <Sequence DisplayName="Body" sap:VirtualizedContainerService.HintSize="550.1848739495798,1890.9579831932774" sap2010:WorkflowViewState.IdRef="Sequence_8">
+        <Sequence DisplayName="Body" sap:VirtualizedContainerService.HintSize="550.1848739495798,2066.823529411765" sap2010:WorkflowViewState.IdRef="Sequence_8">
           <sap:WorkflowViewStateService.ViewState>
             <scg:Dictionary x:TypeArguments="x:String, x:Object">
               <x:Boolean x:Key="IsExpanded">True</x:Boolean>
@@ -105,9 +107,9 @@
               <OutArgument x:TypeArguments="x:Int32">[downpayment]</OutArgument>
             </ui:InputDialog.Result>
           </ui:InputDialog>
-          <If Condition="[downpayment = 50]" sap:VirtualizedContainerService.HintSize="509.0420168067227,1519.058823529412" sap2010:WorkflowViewState.IdRef="If_2">
+          <If Condition="[downpayment = 50]" sap:VirtualizedContainerService.HintSize="509.0420168067227,1694.9243697478992" sap2010:WorkflowViewState.IdRef="If_2">
             <If.Then>
-              <Sequence sap:VirtualizedContainerService.HintSize="450.15126050420173,1034.218487394958" sap2010:WorkflowViewState.IdRef="Sequence_4">
+              <Sequence sap:VirtualizedContainerService.HintSize="450.15126050420173,1210.0840336134454" sap2010:WorkflowViewState.IdRef="Sequence_4">
                 <sap:WorkflowViewStateService.ViewState>
                   <scg:Dictionary x:TypeArguments="x:String, x:Object">
                     <x:Boolean x:Key="IsExpanded">True</x:Boolean>
@@ -118,15 +120,16 @@
                     <OutArgument x:TypeArguments="x:String">[host_decision]</OutArgument>
                   </ui:InputDialog.Result>
                 </ui:InputDialog>
-                <If Condition="[host_decision = &quot;yes&quot;]" sap:VirtualizedContainerService.HintSize="409.00840336134456,662.3193277310925" sap2010:WorkflowViewState.IdRef="If_3">
+                <If Condition="[host_decision = &quot;yes&quot;]" sap:VirtualizedContainerService.HintSize="409.00840336134456,838.1848739495799" sap2010:WorkflowViewState.IdRef="If_3">
                   <If.Then>
-                    <Sequence sap:VirtualizedContainerService.HintSize="375.1260504201681,239.5966386554622" sap2010:WorkflowViewState.IdRef="Sequence_6">
+                    <Sequence sap:VirtualizedContainerService.HintSize="375.1260504201681,415.4621848739496" sap2010:WorkflowViewState.IdRef="Sequence_6">
                       <sap:WorkflowViewStateService.ViewState>
                         <scg:Dictionary x:TypeArguments="x:String, x:Object">
                           <x:Boolean x:Key="IsExpanded">True</x:Boolean>
                         </scg:Dictionary>
                       </sap:WorkflowViewStateService.ViewState>
                       <ui:MessageBox Caption="{x:Null}" ChosenButton="{x:Null}" AutoCloseAfter="00:00:00" DisplayName="Message Box" sap:VirtualizedContainerService.HintSize="333.98319327731093,86.31932773109244" sap2010:WorkflowViewState.IdRef="MessageBox_3" Text="[&quot;booking done&quot;]" />
+                      <ui:WriteTextFile File="{x:Null}" DisplayName="Write Text File" FileName="D:\desktop\3UiPath\full_payment_data.txt" sap:VirtualizedContainerService.HintSize="333.98319327731093,135.52941176470588" sap2010:WorkflowViewState.IdRef="WriteTextFile_1" Text="[&quot;host decision is &quot; + host_decision + Environment.NewLine + &quot;downpayment is &quot; + downpayment.ToString()]" />
                       <ui:Break sap:VirtualizedContainerService.HintSize="333.98319327731093,25.008403361344538" sap2010:WorkflowViewState.IdRef="Break_1" />
                     </Sequence>
                   </If.Then>
@@ -165,9 +168,6 @@
           </If>
         </Sequence>
       </ui:InterruptibleWhile.Body>
-      <ui:InterruptibleWhile.Condition>
-        <VisualBasicValue x:TypeArguments="x:Boolean" ExpressionText="counter &lt; 3" />
-      </ui:InterruptibleWhile.Condition>
     </ui:InterruptibleWhile>
     <If Condition="[counter = 3]" sap:VirtualizedContainerService.HintSize="584.0672268907564,357.37815126050424" sap2010:WorkflowViewState.IdRef="If_1">
       <sap:WorkflowViewStateService.ViewState>
