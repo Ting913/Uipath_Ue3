@@ -102,7 +102,7 @@
               <x:Boolean x:Key="IsExpanded">True</x:Boolean>
             </scg:Dictionary>
           </sap:WorkflowViewStateService.ViewState>
-          <ui:InputDialog Options="{x:Null}" OptionsString="{x:Null}" DisplayName="Input Dialog" sap:VirtualizedContainerService.HintSize="509.0420168067227,243.63025210084035" sap2010:WorkflowViewState.IdRef="InputDialog_6" IsPassword="False" Label="please input the Downpayment" Title="define Downpayment">
+          <ui:InputDialog Options="{x:Null}" OptionsString="{x:Null}" DisplayName="Input Dialog" sap:VirtualizedContainerService.HintSize="509.0420168067227,243.63025210084035" sap2010:WorkflowViewState.IdRef="InputDialog_6" IsPassword="False" Label="please input the Downpayment" Title="Define Downpayment">
             <ui:InputDialog.Result>
               <OutArgument x:TypeArguments="x:Int32">[downpayment]</OutArgument>
             </ui:InputDialog.Result>
@@ -128,7 +128,7 @@
                           <x:Boolean x:Key="IsExpanded">True</x:Boolean>
                         </scg:Dictionary>
                       </sap:WorkflowViewStateService.ViewState>
-                      <ui:MessageBox Caption="{x:Null}" ChosenButton="{x:Null}" AutoCloseAfter="00:00:00" DisplayName="Message Box" sap:VirtualizedContainerService.HintSize="333.98319327731093,86.31932773109244" sap2010:WorkflowViewState.IdRef="MessageBox_3" Text="[&quot;booking done&quot;]" />
+                      <ui:MessageBox Caption="{x:Null}" ChosenButton="{x:Null}" AutoCloseAfter="00:00:00" DisplayName="Message Box" sap:VirtualizedContainerService.HintSize="333.98319327731093,86.31932773109244" sap2010:WorkflowViewState.IdRef="MessageBox_3" Text="[&quot;Successfully booked this room. Congrats!&quot;]" />
                       <ui:WriteTextFile File="{x:Null}" DisplayName="Write Text File" FileName="D:\desktop\3UiPath\full_payment_data.txt" sap:VirtualizedContainerService.HintSize="333.98319327731093,135.52941176470588" sap2010:WorkflowViewState.IdRef="WriteTextFile_1" Text="[&quot;host decision is &quot; + host_decision + Environment.NewLine + &quot;downpayment is &quot; + downpayment.ToString()]" />
                       <ui:Break sap:VirtualizedContainerService.HintSize="333.98319327731093,25.008403361344538" sap2010:WorkflowViewState.IdRef="Break_1" />
                     </Sequence>
@@ -140,7 +140,7 @@
                           <x:Boolean x:Key="IsExpanded">True</x:Boolean>
                         </scg:Dictionary>
                       </sap:WorkflowViewStateService.ViewState>
-                      <ui:MessageBox Caption="{x:Null}" ChosenButton="{x:Null}" AutoCloseAfter="00:00:00" DisplayName="Message Box" sap:VirtualizedContainerService.HintSize="333.98319327731093,86.31932773109244" sap2010:WorkflowViewState.IdRef="MessageBox_4" Text="[&quot;booking cancelled because disagree&quot;]" />
+                      <ui:MessageBox Caption="{x:Null}" ChosenButton="{x:Null}" AutoCloseAfter="00:00:00" DisplayName="Message Box" sap:VirtualizedContainerService.HintSize="333.98319327731093,86.31932773109244" sap2010:WorkflowViewState.IdRef="MessageBox_4" Text="[&quot;The booking was cancelled because the landlord rejected your request.&quot;]" />
                       <ui:Break sap:VirtualizedContainerService.HintSize="333.98319327731093,25.008403361344538" sap2010:WorkflowViewState.IdRef="Break_2" />
                     </Sequence>
                   </If.Else>
@@ -183,7 +183,7 @@
               <x:Boolean x:Key="IsExpanded">True</x:Boolean>
             </scg:Dictionary>
           </sap:WorkflowViewStateService.ViewState>
-          <ui:MessageBox Caption="{x:Null}" ChosenButton="{x:Null}" AutoCloseAfter="00:00:00" DisplayName="Message Box" sap:VirtualizedContainerService.HintSize="333.98319327731093,86.31932773109244" sap2010:WorkflowViewState.IdRef="MessageBox_1" Text="[&quot;booking cancelled&quot;]" />
+          <ui:MessageBox Caption="{x:Null}" ChosenButton="{x:Null}" AutoCloseAfter="00:00:00" DisplayName="Message Box" sap:VirtualizedContainerService.HintSize="333.98319327731093,86.31932773109244" sap2010:WorkflowViewState.IdRef="MessageBox_1" Text="[&quot;Booking cancelled&quot;]" />
         </Sequence>
       </If.Then>
       <If.Else>
