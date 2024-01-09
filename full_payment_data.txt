@@ -1,0 +1,2 @@
+host decision is yes
+downpayment is 50
